@@ -17,47 +17,54 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-/* Navbar Styles */
+/* 🌑 Overall Navbar Container */
+.navbar {
+  background-color: #21222a;  /* dark background */
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 🧭 Navbar Inner Layout */
 .nav-container {
   display: flex;
-  flex-direction:row;
-  align-items: center;        /* vertically align items */
-  justify-content: space-between; /* logo/title left, list right */
+  align-items: center;          /* vertically center all content */
+  justify-content: space-between; /* logo/title left, menu right */
   padding: 10px 40px;
 }
 
-/* Logo + Title styling */
+/* 🧩 Left side group: Logo + Title */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* ⬅️ controls how close the logo & title are */
+}
+
+/* 🖼️ Logo Styling */
 .nav-logo {
   width: 40px;
   height: 40px;
-  margin-right: 2px;
+  display: block;
 }
 
+/* 🩵 Title Styling */
 .nav-title {
   color: #61dafb;
   font-size: 1.5rem;
   font-weight: 700;
+  user-select: none; /* prevent text highlight */
 }
 
-/* ✅ Make logo and title sit side by side neatly */
-.navbar {
-  background-color: #21222a;
-}
-
-.nav-container > .nav-logo,
-.nav-container > .nav-title {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: left;
-}
-
-/* ✅ Style the nav list (Contact / Reference) */
+/* 📜 Right side: Navigation List */
 .nav-list {
-  list-style: none;         
-  display: flex;            
-  gap: 20px;                 
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* spacing between list items */
+  margin: 0;
+  padding: 0;
 }
 
+/* 🧾 Nav Items */
 .nav-list li {
   color: #deebf8;
   font-size: 1rem;
@@ -66,9 +73,21 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Hover effect */
+/* ✨ Hover Effect */
 .nav-list li:hover {
-  color: #61dafb; 
+  color: #61dafb;
+}
+
+/* 📱 Responsive tweak (optional) */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-list {
+    gap: 15px;
+  }
 }
 
 
