@@ -17,28 +17,58 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 /* Navbar Styles */
 .nav-container {
   display: flex;
-  align-items: center;           
-  justify-content: flex-start;    
+  flex-direction:row;
+  align-items: center;        /* vertically align items */
+  justify-content: space-between; /* logo/title left, list right */
   padding: 10px 40px;
-  gap: 10px;                       
 }
 
-/* Reduce spacing between image and text */
+/* Logo + Title styling */
 .nav-logo {
   width: 40px;
   height: 40px;
-  margin: 0;                     
+  margin-right: 2px;
 }
 
-/* Text style */
 .nav-title {
   color: #61dafb;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+/* ✅ Make logo and title sit side by side neatly */
+.navbar {
+  background-color: #21222a;
+}
+
+.nav-container > .nav-logo,
+.nav-container > .nav-title {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: left;
+}
+
+/* ✅ Style the nav list (Contact / Reference) */
+.nav-list {
+  list-style: none;         
+  display: flex;            
+  gap: 20px;                 
+}
+
+.nav-list li {
+  color: #deebf8;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-list li:hover {
+  color: #61dafb; 
 }
 
 
