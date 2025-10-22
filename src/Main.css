@@ -128,3 +128,13 @@ body {
   color: #61dafb;
   cursor: default;
 }
+small{
+  padding: 10px;
+  text-align: right;
+  background-color: #454d4f;
+  justify-content: center;
+}
+small:hover{
+  color: #61dafb;
+  cursor: default;
+}
